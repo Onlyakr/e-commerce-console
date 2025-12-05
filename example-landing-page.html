@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>GameConsole Hub - Homepage</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oxanium:wght@400;500;700&amp;family=Libre+Baskerville:wght@400;700&amp;family=IBM+Plex+Mono:wght@400;500;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+      rel="stylesheet"
+    />
+    <style type="text/tailwindcss">
+      .material-symbols-outlined {
+        font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+      }
+    </style>
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              background: "#030303",
+              foreground: "#f2f2f2",
+              primary: "#00ff84",
+              "primary-foreground": "#030303",
+              secondary: "#ce47eb",
+              "secondary-foreground": "#ffffff",
+              accent: "#fcaf00",
+              "accent-foreground": "#0b0b0b",
+              card: "#0b0b0b",
+              "card-foreground": "#eeeeee",
+              popover: "#161616",
+              "popover-foreground": "#e1e5eb",
+              muted: "#222222",
+              "muted-foreground": "#9e9e9e",
+              border: "#2e2e2e",
+              input: "#2e2e2e",
+              ring: "#00ff84",
+              destructive: "#ff133c",
+              "destructive-foreground": "#ffffff",
+            },
+            fontFamily: {
+              sans: ["Oxanium", "sans-serif"],
+              serif: ["Libre Baskerville", "serif"],
+              mono: ["IBM Plex Mono", "monospace"],
+            },
+            borderRadius: {
+              DEFAULT: "0.5rem",
+              lg: "0.5rem",
+              xl: "1rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-background font-sans text-foreground">
+    <div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+      <header
+        class="sticky top-0 z-50 w-full border-b border-solid border-border bg-background/80 backdrop-blur-md"
+      >
+        <div
+          class="mx-auto flex max-w-7xl items-center justify-between whitespace-nowrap px-4 py-3 sm:px-6 lg:px-8"
+        >
+          <div class="flex items-center gap-8">
+            <div class="flex items-center gap-3 text-foreground">
+              <div class="size-6 text-primary">
+                <svg
+                  fill="currentColor"
+                  viewbox="0 0 48 48"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clip-path="url(#clip0_6_319)">
+                    <path
+                      d="M8.57829 8.57829C5.52816 11.6284 3.451 15.5145 2.60947 19.7452C1.76794 23.9758 2.19984 28.361 3.85056 32.3462C5.50128 36.3314 8.29667 39.7376 11.8832 42.134C15.4698 44.5305 19.6865 45.8096 24 45.8096C28.3135 45.8096 32.5302 44.5305 36.1168 42.134C39.7033 39.7375 42.4987 36.3314 44.1494 32.3462C45.8002 28.361 46.2321 23.9758 45.3905 19.7452C44.549 15.5145 42.4718 11.6284 39.4217 8.57829L24 24L8.57829 8.57829Z"
+                    ></path>
+                  </g>
+                  <defs>
+                    <clippath id="clip0_6_319">
+                      <rect fill="white" height="48" width="48"></rect>
+                    </clippath>
+                  </defs>
+                </svg>
+              </div>
+              <h2 class="text-foreground text-xl font-bold leading-tight">
+                GameConsole Hub
+              </h2>
+            </div>
+            <nav class="hidden items-center gap-8 md:flex">
+              <a
+                class="text-foreground text-sm font-medium leading-normal transition-colors hover:text-primary"
+                href="#"
+                >Home</a
+              >
+              <a
+                class="text-muted-foreground text-sm font-medium leading-normal transition-colors hover:text-primary"
+                href="#"
+                >Consoles</a
+              >
+              <a
+                class="text-muted-foreground text-sm font-medium leading-normal transition-colors hover:text-primary"
+                href="#"
+                >Games</a
+              >
+              <a
+                class="text-muted-foreground text-sm font-medium leading-normal transition-colors hover:text-primary"
+                href="#"
+                >Accessories</a
+              >
+              <a
+                class="text-muted-foreground text-sm font-medium leading-normal transition-colors hover:text-primary"
+                href="#"
+                >Deals</a
+              >
+            </nav>
+          </div>
+          <div class="flex flex-1 items-center justify-end gap-4">
+            <label class="hidden lg:flex flex-col min-w-40 !h-10 max-w-64">
+              <div class="flex w-full flex-1 items-stretch rounded-lg h-full">
+                <div
+                  class="text-muted-foreground flex border border-input bg-background items-center justify-center pl-3 rounded-l-lg border-r-0"
+                >
+                  <span class="material-symbols-outlined text-xl">search</span>
+                </div>
+                <input
+                  class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-foreground focus:outline-0 focus:ring-2 focus:ring-ring border border-input bg-background h-full placeholder:text-muted-foreground px-4 rounded-l-none border-l-0 pl-2 text-base font-normal leading-normal"
+                  placeholder="Search"
+                  value=""
+                />
+              </div>
+            </label>
+            <div class="flex gap-2">
+              <button
+                class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 border border-border bg-card text-card-foreground hover:bg-muted transition-colors gap-2 text-sm font-bold leading-normal min-w-0 px-2.5"
+              >
+                <span class="material-symbols-outlined text-2xl">person</span>
+              </button>
+              <button
+                class="relative flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 border border-border bg-card text-card-foreground hover:bg-muted transition-colors gap-2 text-sm font-bold leading-normal min-w-0 px-2.5"
+              >
+                <span class="material-symbols-outlined text-2xl"
+                  >shopping_cart</span
+                >
+                <span
+                  class="absolute -top-1 -right-1 flex h-4 w-4 items-center justify-center rounded-full bg-primary text-xs font-bold text-primary-foreground"
+                  >3</span
+                >
+              </button>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="flex-grow">
+        <div class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
+          <div class="flex flex-col gap-12">
+            <div class="@container">
+              <div class="@[480px]:p-0">
+                <div
+                  class="relative flex min-h-[480px] flex-col gap-6 overflow-hidden bg-cover bg-center bg-no-repeat @[480px]:gap-8 @[480px]:rounded-xl items-start justify-end px-6 pb-10 @[480px]:px-10 shadow-xl"
+                  data-alt="Futuristic glowing lines on a dark background representing next-gen gaming"
+                  style="
+                    background-image: linear-gradient(
+                        to top,
+                        rgba(3, 3, 3, 0.9) 0%,
+                        rgba(3, 3, 3, 0.1) 100%
+                      ),
+                      url('https://lh3.googleusercontent.com/aida-public/AB6AXuC3g7sLg2DtLrX5xHgk2eu5LTPE54m1zGvK66-m8wj3WsSp4JUPmShdtlR6SvsDfjOZC0QQ0jb-JnlOZPdosj71fWapLrXhtunIzKopgx0VVT70-dYlyAG8re_WGDKHr-9Dcd2B4pe349iH_4s0rVuns5dgkfBRdCkfCsXsFUcrO8qj1YWQZlUYSIi4rv3XvURvELobcY4PunD5rBpyym3rnBkhPDK3DhjNlUFZOGNwriSeaFlPyHfFyQaE4Ygj7KRe2VRP2Mh4WtQ');
+                  "
+                >
+                  <div class="flex flex-col gap-4 text-left max-w-xl">
+                    <h1
+                      class="text-foreground text-4xl font-bold leading-tight @[480px]:text-5xl @[480px]:font-bold @[480px]:leading-tight"
+                    >
+                      The Future of Gaming is Here
+                    </h1>
+                    <h2
+                      class="text-muted-foreground font-serif text-base font-normal leading-normal @[480px]:text-lg @[480px]:font-normal @[480px]:leading-normal"
+                    >
+                      Discover the new PlayStation 5 Slim and experience
+                      next-gen performance in a smaller, sleeker package.
+                    </h2>
+                  </div>
+                  <button
+                    class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 @[480px]:h-12 @[480px]:px-5 bg-primary text-primary-foreground text-sm font-bold leading-normal @[480px]:text-base @[480px]:font-bold @[480px]:leading-normal transition-transform hover:scale-105 shadow-lg shadow-primary/20"
+                  >
+                    <span class="truncate">Shop Now</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <section>
+              <h2
+                class="text-foreground text-2xl font-bold leading-tight px-4 pb-3 pt-5"
+              >
+                New Arrivals
+              </h2>
+              <div
+                class="flex overflow-x-auto [-ms-scrollbar-style:none] [scrollbar-width:none] [&amp;::-webkit-scrollbar]:hidden"
+              >
+                <div class="flex flex-nowrap items-stretch p-4 gap-6">
+                  <div
+                    class="flex w-64 flex-shrink-0 flex-col gap-4 rounded-xl bg-card shadow-xl transition-transform hover:-translate-y-1 border border-border"
+                  >
+                    <div
+                      class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-t-xl flex flex-col"
+                      data-alt="Sleek white PS5 Slim console on a dark background"
+                      style="
+                        background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBAUgcau1gviZVcNn7Ap_mjVp2qerJw3RI8q780aEAmnIVcrsWg6mLs_VMi5tlCZ1Fo7Cc5zlgLGPlsa4eZq7OGQ-PzsPIN0cChA9lcVeQ9KWyxfAiCCxgtnfOt37oi70-9Tp4Wcy-iaMz2L_E0orqlLVUWsWq6wnTmABYR5I52Z4GKbwMEu86mGInLGWUBz0PJBJSz5YJ-vSuTkEmYbef8-THvAYp0AMyXwUHktqYLQIQ4aSFzR50Mm4JmRTm1LXOKYS84XrV6pik');
+                      "
+                    ></div>
+                    <div
+                      class="flex flex-col flex-1 justify-between p-4 pt-0 gap-4"
+                    >
+                      <div>
+                        <p
+                          class="text-card-foreground text-base font-medium leading-normal"
+                        >
+                          PlayStation 5 Slim Console
+                        </p>
+                        <p
+                          class="font-mono text-muted-foreground text-sm font-normal leading-normal"
+                        >
+                          $449.99
+                        </p>
+                      </div>
+                      <button
+                        class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-muted text-muted-foreground text-sm font-bold leading-normal hover:bg-primary hover:text-primary-foreground transition-colors"
+                      >
+                        <span class="truncate">Add to Cart</span>
+                      </button>
+                    </div>
+                  </div>
+                  <div
+                    class="flex w-64 flex-shrink-0 flex-col gap-4 rounded-xl bg-card shadow-xl transition-transform hover:-translate-y-1 border border-border"
+                  >
+                    <div
+                      class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-t-xl flex flex-col"
+                      data-alt="Black Xbox Series X console with green highlights"
+                      style="
+                        background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCFScV5iKUFXJ3ClsVruUrcywSdXg1Pojbe0iJuf1sdQJTM_3vdR6OkDmnL43gMdj87CyoVYaoF8sqfFH5UhS7o4kZz-3adREJ9a0BqxXK-Xqf0-SIGMzIhrb-DVgCZaKLAW_gRpL4wLCW-uZleCL8VynJI5CvfW8SvPdMol0QqsH99tEJbEZBzPd1oQbZLxnauqdrqyXxMn3_RCXCPaUyczual-Wt8TUalc6TXadwFa5-p8TMnrIY8lRLj5esqRJuu4_BNkmw56YY');
+                      "
+                    ></div>
+                    <div
+                      class="flex flex-col flex-1 justify-between p-4 pt-0 gap-4"
+                    >
+                      <div>
+                        <p
+                          class="text-card-foreground text-base font-medium leading-normal"
+                        >
+                          Xbox Series X - Diablo IV Bundle
+                        </p>
+                        <p
+                          class="font-mono text-muted-foreground text-sm font-normal leading-normal"
+                        >
+                          $499.99
+                        </p>
+                      </div>
+                      <button
+                        class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-muted text-muted-foreground text-sm font-bold leading-normal hover:bg-primary hover:text-primary-foreground transition-colors"
+                      >
+                        <span class="truncate">Add to Cart</span>
+                      </button>
+                    </div>
+                  </div>
+                  <div
+                    class="flex w-64 flex-shrink-0 flex-col gap-4 rounded-xl bg-card shadow-xl transition-transform hover:-translate-y-1 border border-border"
+                  >
+                    <div
+                      class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-t-xl flex flex-col"
+                      data-alt="Nintendo Switch OLED model showing a colorful game screen"
+                      style="
+                        background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCcFau6djZsPpwyCYOarNw-NmlGtcaqy4CR3lchVmCbIu5YVOMOKpGRa04EbEe6ywifzFSMocqQvQkAtcDrqbjIN93MxbAnRmIYSqrVtEGR6V35jN7b6p9ALPNPj1js9jIEpHTwxDRTfzxqDu91nrrfoRfoCOPkYtgz04fpVa4hHH-uC3La8I6xF409_OG5BO7m54viqXqVkqw5gAu7iHHTxyiqNjhEAqqizGHuLp-Pd3jYHmyccHD_N-tPlwAnGMBPAP6M9xRSMz0');
+                      "
+                    ></div>
+                    <div
+                      class="flex flex-col flex-1 justify-between p-4 pt-0 gap-4"
+                    >
+                      <div>
+                        <p
+                          class="text-card-foreground text-base font-medium leading-normal"
+                        >
+                          Nintendo Switch - OLED Model
+                        </p>
+                        <p
+                          class="font-mono text-muted-foreground text-sm font-normal leading-normal"
+                        >
+                          $349.99
+                        </p>
+                      </div>
+                      <button
+                        class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-muted text-muted-foreground text-sm font-bold leading-normal hover:bg-primary hover:text-primary-foreground transition-colors"
+                      >
+                        <span class="truncate">Add to Cart</span>
+                      </button>
+                    </div>
+                  </div>
+                  <div
+                    class="flex w-64 flex-shrink-0 flex-col gap-4 rounded-xl bg-card shadow-xl transition-transform hover:-translate-y-1 border border-border"
+                  >
+                    <div
+                      class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-t-xl flex flex-col"
+                      data-alt="White DualSense Edge Controller with customizable components"
+                      style="
+                        background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA2m7AeUvun_uopXOqpHsIPRDQJmArkF0gyB9tUCG6qAB9eInDgQt5SG49N8wZ8EkF0gFKj6z9d6EY1IEcI9XWH8_n_EnxV83L0yl0c93vCs2_69FEZa-gnlg8MnTUxwPQWj6fKYmyPCJByhXjfnlnJPs6_MheQcZeqJcXPX_5ffIIK3M2ouwCPMJUFL6YwZcU9ypkqdhszr9SnmUEO_tY7gdjUJaU4fCteEFNf8-0asFof5l2CQFK0tX2aGqYnCllxh35Qny-wzdM');
+                      "
+                    ></div>
+                    <div
+                      class="flex flex-col flex-1 justify-between p-4 pt-0 gap-4"
+                    >
+                      <div>
+                        <p
+                          class="text-card-foreground text-base font-medium leading-normal"
+                        >
+                          DualSense Edge Controller
+                        </p>
+                        <p
+                          class="font-mono text-muted-foreground text-sm font-normal leading-normal"
+                        >
+                          $199.99
+                        </p>
+                      </div>
+                      <button
+                        class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-muted text-muted-foreground text-sm font-bold leading-normal hover:bg-primary hover:text-primary-foreground transition-colors"
+                      >
+                        <span class="truncate">Add to Cart</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section>
+              <h2
+                class="text-foreground text-2xl font-bold leading-tight px-4 pb-3 pt-5"
+              >
+                Trending Now
+              </h2>
+              <div
+                class="flex overflow-x-auto [-ms-scrollbar-style:none] [scrollbar-width:none] [&amp;::-webkit-scrollbar]:hidden"
+              >
+                <div class="flex flex-nowrap items-stretch p-4 gap-6">
+                  <div
+                    class="flex w-64 flex-shrink-0 flex-col gap-4 rounded-xl bg-card shadow-xl transition-transform hover:-translate-y-1 border border-border"
+                  >
+                    <div
+                      class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-t-xl flex flex-col"
+                      data-alt="Close up of a black and white Xbox Elite controller"
+                      style="
+                        background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCABCY_drdVo9z7kGszG89Y_DDqj8yKsjWYtcUV1Bz0LJI1B_9ptiPOmiVJYH7GpoXIg2qhB9H6xynwlxWnzK99ozY-jwwFJO41dTwT28p3VPQxzuoVeRGpzZCPjXintg-J6twtsuLlMW4txSQtVUCkccY9BukqszgYIyb15aK1tZKzUL9Bp09-uy990cMuGekrufVKfY-dAfBOt4Q-g2OhidnSClk4g419O8b3nIm-LjP1xQ9q8C070IdV7SmOSgdIwMQsbd2yIpg');
+                      "
+                    ></div>
+                    <div
+                      class="flex flex-col flex-1 justify-between p-4 pt-0 gap-4"
+                    >
+                      <div>
+                        <p
+                          class="text-card-foreground text-base font-medium leading-normal"
+                        >
+                          Xbox Elite Series 2 Controller
+                        </p>
+                        <p
+                          class="font-mono text-muted-foreground text-sm font-normal leading-normal"
+                        >
+                          $179.99
+                        </p>
+                      </div>
+                      <button
+                        class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-muted text-muted-foreground text-sm font-bold leading-normal hover:bg-primary hover:text-primary-foreground transition-colors"
+                      >
+                        <span class="truncate">Add to Cart</span>
+                      </button>
+                    </div>
+                  </div>
+                  <div
+                    class="flex w-64 flex-shrink-0 flex-col gap-4 rounded-xl bg-card shadow-xl transition-transform hover:-translate-y-1 border border-border"
+                  >
+                    <div
+                      class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-t-xl flex flex-col"
+                      data-alt="PlayStation Portal handheld device on a desk"
+                      style="
+                        background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBMEU5rP3ngdOQjyKz-FpVmvTpVmLQwG1C3aeYpcxY6CF0MJhwWn8Uns4atPA5Ql_OY12hnDD6tVo5SnXLWcvbG5KCOz5k9jCuxZNAKLz2A004DfvyhdOlI7Ec48LiZBhqYbFzgxQKTJUDmSBgT_cM9syAVtZEMS4LO2_IcCaoXhuFlPcgCYN1XsGJHhvy9pzg5-d8t4cokYCrFvYIS3TcxVBZiaYvNrtplstBcER5dVjfIQwQ4OU4gRYT8zwWZDh0Z3kygeaQ9nME');
+                      "
+                    ></div>
+                    <div
+                      class="flex flex-col flex-1 justify-between p-4 pt-0 gap-4"
+                    >
+                      <div>
+                        <p
+                          class="text-card-foreground text-base font-medium leading-normal"
+                        >
+                          PlayStation Portal Remote Player
+                        </p>
+                        <p
+                          class="font-mono text-muted-foreground text-sm font-normal leading-normal"
+                        >
+                          $199.99
+                        </p>
+                      </div>
+                      <button
+                        class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-muted text-muted-foreground text-sm font-bold leading-normal hover:bg-primary hover:text-primary-foreground transition-colors"
+                      >
+                        <span class="truncate">Add to Cart</span>
+                      </button>
+                    </div>
+                  </div>
+                  <div
+                    class="flex w-64 flex-shrink-0 flex-col gap-4 rounded-xl bg-card shadow-xl transition-transform hover:-translate-y-1 border border-border"
+                  >
+                    <div
+                      class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-t-xl flex flex-col"
+                      data-alt="Pair of Joy-Con controllers for the Nintendo Switch"
+                      style="
+                        background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA7kugzBIKoun28SsRgzFIFIdnpGAUtmHpBf-7bgGt6lJnCkIl3MYpEEg3HUbirgMBGXIXCxy9xrHVjEJuIjdT_SzHU9W4ZhtOVIpUY6h5zxniTyo6hNiVrOI-hE6Ryyldi6B__hHBADF128tV73thBw1285NQ3TF3r41MHhR6uPjezxSMN_SkdyNCYTVemioLW653MV_IkYNQ2QoywJiZC6q8Yj4UGKDUKLrKelJ8_PMQUaqDOsDkXgz5HQJZsBl67TeH5jRUcSg0');
+                      "
+                    ></div>
+                    <div
+                      class="flex flex-col flex-1 justify-between p-4 pt-0 gap-4"
+                    >
+                      <div>
+                        <p
+                          class="text-card-foreground text-base font-medium leading-normal"
+                        >
+                          Joy-Con (L)/(R) Controller Pair
+                        </p>
+                        <p
+                          class="font-mono text-muted-foreground text-sm font-normal leading-normal"
+                        >
+                          $79.99
+                        </p>
+                      </div>
+                      <button
+                        class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-muted text-muted-foreground text-sm font-bold leading-normal hover:bg-primary hover:text-primary-foreground transition-colors"
+                      >
+                        <span class="truncate">Add to Cart</span>
+                      </button>
+                    </div>
+                  </div>
+                  <div
+                    class="flex w-64 flex-shrink-0 flex-col gap-4 rounded-xl bg-card shadow-xl transition-transform hover:-translate-y-1 border border-border"
+                  >
+                    <div
+                      class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-t-xl flex flex-col"
+                      data-alt="PlayStation VR2 headset on a stand"
+                      style="
+                        background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCGpXPnOvxTdV9GmgeltcZs5X3kDVScMCEfz48EhMLe0Z3chnyghnrLd3z-yRIfH_B1owp0w9i5iAUt0DFRz_Kpx3hoYXdenXKnJASjfYq8z1Max0JO_QP5XuEwENNyVI_EAoxGTs2pI5f5RYoL9dtKijNi17TeFPPcnp8286cGLpth11mH0xZ92hxwhryOkfC5l7rZG4Zczs8jZRBqqKl3MaJbvCOflZVGk61ZJkX0yYAP8u9W_fObsfyJHewF7H9jPVOAFu59-2I');
+                      "
+                    ></div>
+                    <div
+                      class="flex flex-col flex-1 justify-between p-4 pt-0 gap-4"
+                    >
+                      <div>
+                        <p
+                          class="text-card-foreground text-base font-medium leading-normal"
+                        >
+                          PlayStation VR2
+                        </p>
+                        <p
+                          class="font-mono text-muted-foreground text-sm font-normal leading-normal"
+                        >
+                          $549.99
+                        </p>
+                      </div>
+                      <button
+                        class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-muted text-muted-foreground text-sm font-bold leading-normal hover:bg-primary hover:text-primary-foreground transition-colors"
+                      >
+                        <span class="truncate">Add to Cart</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="py-12">
+              <div
+                class="flex flex-wrap items-center justify-center gap-x-12 gap-y-8 md:justify-around"
+              >
+                <img
+                  alt="PlayStation logo"
+                  class="h-8 max-w-[150px] object-contain opacity-50 grayscale transition hover:opacity-100 hover:grayscale-0"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBy6fQfzYWenkUi6dXljS_1DUn7OQ0AXbWaxbyfsDAZOdHz7jwkstyVQQ0AHDF1cPIUQO0S7tqbak29wXvIawi8DOTi4uE4P8Kt_a21fpstgifugGyZ9ilg_tXZdLAHD4uCt0hBvHZOdhZQLdE7M4alvl8VM5-pw7oVQyaF_FrBC7VVAyO6o3UjB3O0RDGdbXmmsg6f80waqHKi_TlMFJUdqDIun_nTkgJSwO4VVusoojBLn3tqnPdQgErnWWl1kRbt7oJUuKydcU"
+                />
+                <img
+                  alt="Xbox logo"
+                  class="h-8 max-w-[150px] object-contain opacity-50 grayscale transition hover:opacity-100 hover:grayscale-0"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuAR4SsjBg65czDGL40SISDoWXtFh98d7fu6V8H6L8RW0_tHVljPypu2ZPmcdVtM8b8Fm606mFgPV7k1bCE-B758bX1BllZ4JtaGoQxeHyeRUNygWr9x3ZzYbqI0pNYYfjdiaEe_UYFN0tRkQkLKMmS1_domA1X5dEcySu-qf5WzcBNYoi4ty52iGtuJWCSY-38ScGNKe-KToU2JjQkdXJUZ4b13CIenZ63OjOo1eeeN6alB8GQZR1bcasEFq8yEjHJu959lab8Y8aw"
+                />
+                <img
+                  alt="Nintendo logo"
+                  class="h-8 max-w-[150px] object-contain opacity-50 grayscale transition hover:opacity-100 hover:grayscale-0"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBy_VSCC4wS7-2CnumpAn3Eq34Jpsj-z_TBWgPx56iDuwrx_722eKiO_gzcKZykX6QXCaYdtxLnwaevsbY0X5RoaLq_Jj-iGP64nlNJATfxdOKLbKAN7vcKb0QEYpi3TNeKcgw-QPrbnx4l9QKGalLSNtMec6VvJeagAP1HqbIyfJKBWRHsHqsj-8KBWsoyZFO2AW_oXTOWTTZOfHxdrs4P9vM38p3C5tF-Z7uAmwypA8Ldnmu6sfR__DnfsNi5Pf6sy8azSgWX30"
+                />
+              </div>
+            </section>
+          </div>
+        </div>
+      </main>
+      <footer class="w-full border-t border-solid border-border bg-background">
+        <div class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+          <div class="grid grid-cols-2 gap-8 md:grid-cols-4 lg:grid-cols-5">
+            <div class="col-span-2 lg:col-span-1">
+              <div class="flex items-center gap-3 text-foreground">
+                <div class="size-6 text-primary">
+                  <svg
+                    fill="currentColor"
+                    viewbox="0 0 48 48"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g clip-path="url(#clip0_6_319_footer)">
+                      <path
+                        d="M8.57829 8.57829C5.52816 11.6284 3.451 15.5145 2.60947 19.7452C1.76794 23.9758 2.19984 28.361 3.85056 32.3462C5.50128 36.3314 8.29667 39.7376 11.8832 42.134C15.4698 44.5305 19.6865 45.8096 24 45.8096C28.3135 45.8096 32.5302 44.5305 36.1168 42.134C39.7033 39.7375 42.4987 36.3314 44.1494 32.3462C45.8002 28.361 46.2321 23.9758 45.3905 19.7452C44.549 15.5145 42.4718 11.6284 39.4217 8.57829L24 24L8.57829 8.57829Z"
+                      ></path>
+                    </g>
+                    <defs>
+                      <clippath id="clip0_6_319_footer">
+                        <rect fill="white" height="48" width="48"></rect>
+                      </clippath>
+                    </defs>
+                  </svg>
+                </div>
+                <h2 class="text-foreground text-xl font-bold">
+                  GameConsole Hub
+                </h2>
+              </div>
+              <p class="mt-4 text-sm text-muted-foreground">
+                Your one-stop shop for the latest in gaming consoles and
+                accessories.
+              </p>
+            </div>
+            <div class="mt-2">
+              <h3 class="text-sm font-bold text-foreground">Shop</h3>
+              <ul class="mt-4 space-y-2">
+                <li>
+                  <a
+                    class="text-sm text-muted-foreground hover:text-primary"
+                    href="#"
+                    >Consoles</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="text-sm text-muted-foreground hover:text-primary"
+                    href="#"
+                    >Games</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="text-sm text-muted-foreground hover:text-primary"
+                    href="#"
+                    >Accessories</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="text-sm text-muted-foreground hover:text-primary"
+                    href="#"
+                    >Deals</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="mt-2">
+              <h3 class="text-sm font-bold text-foreground">Support</h3>
+              <ul class="mt-4 space-y-2">
+                <li>
+                  <a
+                    class="text-sm text-muted-foreground hover:text-primary"
+                    href="#"
+                    >Contact Us</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="text-sm text-muted-foreground hover:text-primary"
+                    href="#"
+                    >FAQ</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="text-sm text-muted-foreground hover:text-primary"
+                    href="#"
+                    >Shipping &amp; Returns</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="text-sm text-muted-foreground hover:text-primary"
+                    href="#"
+                    >Track Order</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="col-span-2 mt-2 md:col-span-1">
+              <h3 class="text-sm font-bold text-foreground">Company</h3>
+              <ul class="mt-4 space-y-2">
+                <li>
+                  <a
+                    class="text-sm text-muted-foreground hover:text-primary"
+                    href="#"
+                    >About Us</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="text-sm text-muted-foreground hover:text-primary"
+                    href="#"
+                    >Careers</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="text-sm text-muted-foreground hover:text-primary"
+                    href="#"
+                    >Privacy Policy</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="text-sm text-muted-foreground hover:text-primary"
+                    href="#"
+                    >Terms of Service</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="col-span-2 mt-2 md:col-span-4 lg:col-span-1">
+              <h3 class="text-sm font-bold text-foreground">Stay Connected</h3>
+              <p class="mt-4 text-sm text-muted-foreground">
+                Subscribe to our newsletter for the latest deals.
+              </p>
+              <form class="mt-4 flex gap-2">
+                <input
+                  class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-foreground focus:outline-0 focus:ring-2 focus:ring-ring border border-input bg-background h-10 placeholder:text-muted-foreground px-4 text-sm font-normal leading-normal"
+                  placeholder="Enter your email"
+                  type="email"
+                />
+                <button
+                  class="flex-shrink-0 flex items-center justify-center rounded-lg h-10 px-4 bg-primary text-primary-foreground text-sm font-bold hover:bg-primary/90 transition-colors"
+                >
+                  Subscribe
+                </button>
+              </form>
+            </div>
+          </div>
+          <div class="mt-12 border-t border-solid border-border pt-8">
+            <p class="text-center text-sm text-muted-foreground">
+              © 2024 GameConsole Hub. All rights reserved.
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
